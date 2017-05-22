@@ -6,6 +6,7 @@ import LocalStore from '../util/localStore'
 import { CITYNAME } from '../config/localStoreKey'
 import * as userInfoActionsFromOtherFile from '../actions/userinfo' 
 
+
 class App extends React.Component {
     constructor(props, context) {
         super(props, context);
