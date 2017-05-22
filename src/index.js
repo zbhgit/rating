@@ -1,8 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-import './index.css';
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { hashHistory } from 'react-router'
+import configureStore from './store/configureStore'
+import RouteMap from './router/routeMap'
+import './static/css/common.less'
+import './static/css/font.css'
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+// 创建store对象
+
+const store = configureStore();
+
+console.dir(store);
+render(
+  <Provider store={store}>
+    <RouteMap history={hashHistory} />
+  </Provider>,
+  document.getElementById('root')
+)

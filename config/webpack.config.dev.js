@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 const autoprefixer = require('autoprefixer');
 const path = require('path');
@@ -136,7 +136,7 @@ module.exports = {
         exclude: [
           /\.html$/,
           /\.(js|jsx)$/,
-          /\.css$/,
+          /\.(css|less)$/,
           /\.json$/,
           /\.bmp$/,
           /\.gif$/,
@@ -178,7 +178,7 @@ module.exports = {
       // In production, we use a plugin to extract that CSS to a file, but
       // in development "style" loader enables hot editing of CSS.
       {
-        test: /\.css$/,
+        test: /\.(css|less)$/,
         use: [
           require.resolve('style-loader'),
           {
@@ -205,6 +205,9 @@ module.exports = {
               ],
             },
           },
+          {
+            loader: require.resolve('less-loader')
+          }
         ],
       },
       // ** STOP ** Are you adding a new loader?

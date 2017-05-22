@@ -66,4 +66,7 @@ $ npm install --save-dev redux-devTools
 ```
 
 
+这个时候,环境基本搭建完毕,如果后面有用到的再进行更改.
+
+
 
