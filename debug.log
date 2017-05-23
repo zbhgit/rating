@@ -1,0 +1,7 @@
+[0523/145547.536:ERROR:process_reader_win.cc(142)] SuspendThread: 拒绝访问。 (0x5)
+[0523/145547.551:ERROR:process_reader_win.cc(233)] ReadMemory at 0x5d30048 of 32768 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0523/145547.552:WARNING:pe_image_annotations_reader.cc(65)] could not read simple annotations from C:\Program Files (x86)\Google\Chrome\Application\57.0.2987.133\chrome_elf.dll
+[0523/145547.839:ERROR:process_reader_win.cc(173)] ResumeThread: 参数错误。 (0x57)
+[0523/145547.839:ERROR:process_reader_win.cc(142)] SuspendThread: 拒绝访问。 (0x5)
+[0523/145547.839:ERROR:exception_snapshot_win.cc(87)] thread ID 11244 not found in process
+[0523/145547.839:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
