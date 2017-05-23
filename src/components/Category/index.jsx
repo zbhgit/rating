@@ -7,7 +7,7 @@ import './style.less'
 class Category extends Component {
   constructor() {
     super()
-    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate
+    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     this.state = {
       index: 0
     }

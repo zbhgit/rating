@@ -11,7 +11,6 @@ import './static/css/font.css'
 
 const store = configureStore();
 
-console.dir(store);
 render(
   <Provider store={store}>
     <RouteMap history={hashHistory} />

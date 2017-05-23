@@ -10,7 +10,7 @@ import * as userInfoActionsFromOtherFile from '../actions/userinfo'
 class App extends React.Component {
     constructor(props, context) {
         super(props, context);
-        this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+        this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
         this.state = {
             initDone: false
         }

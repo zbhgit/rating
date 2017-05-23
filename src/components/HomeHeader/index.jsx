@@ -5,7 +5,7 @@ import './style.less'
 class HomeHeader extends Component {
   constructor() {
     super()
-    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate
+    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
   }
   render() {
     return (
