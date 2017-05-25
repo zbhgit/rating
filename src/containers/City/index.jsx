@@ -17,7 +17,6 @@ import CommonHeader from '../../components/Header'
 import CurrentCity from '../../components/currentCity'
 import CityList from '../../components/CityList'
 
-import './style.less'
 
 class City extends React.Component {
     constructor(props, context) {
