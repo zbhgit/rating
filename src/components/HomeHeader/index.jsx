@@ -26,7 +26,9 @@ class HomeHeader extends Component {
         <div className="search">
           <SearchInput value="" enterHandle={this.enterHandle.bind(this)} />
         </div>
+        <Link to="/Login">
         <div className="icon-user user"></div>
+        </Link>
       </hqader>
     )
   }

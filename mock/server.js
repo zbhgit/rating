@@ -5,7 +5,7 @@ var KoaRouter = require('koa-router');
 // import koaRouter from 'koa-router'
 
 let app = new Koa()
-let router =new KoaRouter()
+let router = new KoaRouter()
 
 // router.get('/', function *(next) {
 //     this.body = 'hello koa !'
@@ -18,13 +18,13 @@ let router =new KoaRouter()
 // 首页 —— 广告（超值特惠）
 var homeAdData = require('./home/ad.js')
 
-router.get('/api/homead', function (ctx,next) {
+router.get('/api/homead', function (ctx, next) {
     ctx.body = homeAdData
 });
 
 // 首页 —— 推荐列表（猜你喜欢）
 var homeListData = require('./home/list.js')
-router.get('/api/homelist/:city/:page', function (ctx,next) {
+router.get('/api/homelist/:city/:page', function (ctx, next) {
     // 参数
     const params = ctx.params
     const paramsCity = params.city
@@ -40,7 +40,7 @@ router.get('/api/homelist/:city/:page', function (ctx,next) {
 
 // 搜索结果页 - 搜索结果 - 三个参数
 var searchListData = require('./search/list.js')
-router.get('/api/search/:page/:city/:category/:keyword', function (ctx,next) {
+router.get('/api/search/:page/:city/:category/:keyword', function (ctx, next) {
     // 参数
     const params = ctx.params
     const paramsPage = params.page
@@ -56,7 +56,7 @@ router.get('/api/search/:page/:city/:category/:keyword', function (ctx,next) {
     ctx.body = searchListData
 })
 // 搜索结果页 - 搜索结果 - 两个参数
-router.get('/api/search/:page/:city/:category', function (ctx,next) {
+router.get('/api/search/:page/:city/:category', function (ctx, next) {
     // 参数
     const params = ctx.params
     const paramsPage = params.page
@@ -71,9 +71,32 @@ router.get('/api/search/:page/:city/:category', function (ctx,next) {
 })
 
 
+//详情页  用户评论
+
+const detailInfo = require('./detail/info.js')
+router.get('/api/detail/info/:id', function (ctx, next) {
+    const params = ctx.params
+    const id = params.id
+
+    ctx.body = detailInfo
+    console.log(ctx.body)
+    
+})
+
+// 详情页  用户评论
+
+const detailComent = require('./detail/comment')
+
+router.get('/api/detail/comment/:page/:id', function (ctx, next) {
+    ctx.body = detailComent
+    console.log(ctx.body)
+})
+
+
+
 
 // 开始服务并生成路由
 app.use(router.routes())
-   .use(router.allowedMethods());
+    .use(router.allowedMethods());
 app.listen(8080);
 console.log('成功')
