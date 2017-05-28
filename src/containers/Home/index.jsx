@@ -17,7 +17,7 @@ class Home extends React.Component {
 		}
 		render() {
 				return (
-						<div>
+						<div className="animated slideInRight">
 								<HomeHeader cityName={this.props.userinfo.cityName}></HomeHeader>
 								<Category/>
 								<Split />

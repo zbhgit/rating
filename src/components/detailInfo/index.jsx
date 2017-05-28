@@ -1,6 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-
+import Star from '../star'
 import './style.less'
 
 class DeatilInfo extends React.Component {
@@ -17,7 +17,7 @@ class DeatilInfo extends React.Component {
             <div className="seller-desc">
               <h2 className="title">{this.props.data.title}</h2>
               <div className="seller-data">
-                <span>start</span>
+                <Star />
                 <span>288条</span>
                 <span>￥88/人</span>
               </div>

@@ -93,7 +93,11 @@ router.get('/api/detail/comment/:page/:id', function (ctx, next) {
 })
 
 
-
+const orderList = require('./orderlist/orderList')
+router.get('/api/orderlist/:username',function(ctx,next){
+    ctx.body = orderList
+    console.log(orderList)
+})
 
 // 开始服务并生成路由
 app.use(router.routes())

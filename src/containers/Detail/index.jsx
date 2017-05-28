@@ -3,7 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {connect} from 'react-redux';
 
 import Header from '../../components/Header/index'
-
+import Buy from './subpage/buy'
 import Info from './subpage/info'
 import Comment from './subpage/comment'
 import List from './subpage/list'
@@ -19,6 +19,7 @@ class Detail extends React.Component {
 			<div>
 				<Header title="商户详情" />
 				<Info id={id} />
+				<Buy id={id}/>
 				<Split />
 				<Comment />
 				<Split title='小伙伴们还喜欢'/>

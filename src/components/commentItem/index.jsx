@@ -1,6 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-
+import Star from '../../components/star'
 
 import './style.less'
 class CommentItem extends React.Component {
@@ -18,7 +18,7 @@ class CommentItem extends React.Component {
         </div>
         <div className="comment-detial">
           <h3 className="title">我是吃货</h3>
-          <div className="star">star</div>
+          <Star />
           <p className="comment-content">
             我和朋友一起去吃的，真的棒棒滴，胃口棒棒滴环境棒棒滴，不枉此行，已经收藏，要给更多的朋友推荐，因为我是托
           </p>

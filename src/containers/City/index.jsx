@@ -27,7 +27,7 @@ class City extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className=" animated slideInRight">
                 <CommonHeader title="选择城市"/>
                 <CurrentCity cityName={this.props.userinfo.cityName}/>
                 <CityList
