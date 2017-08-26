@@ -34,10 +34,7 @@ class App extends React.Component {
         if (cityName == null) {
             cityName = '北京'
         }
-        this
-            .props
-            .userInfoActions
-            .update({cityName: cityName})
+        this.props.userInfoActions.update({cityName: cityName})
 
         // 更改状态
         this.setState({initDone: true})

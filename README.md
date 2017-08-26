@@ -1,4 +1,11 @@
-## 项目开发记录
+
+*此项目基于React、Redux、react-router
+fetch、koa开发的单页应用*
+
+#### 项目总结
+
+
+
 
 #### 搭建环境
 1. 使用react官方构建工具 create-react-app
@@ -64,9 +71,24 @@ $ npm install --save-dev redux-devTools
   -- index.js
 
 ```
+#### 克隆该项目到本地运行
 
 
-这个时候,环境基本搭建完毕,如果后面有用到的再进行更改.
+```
+$ git clone 'https://github.com/zbhgit/rating.git'
+$ cd rating
+$ npm install
+$ npm run start
+```
+浏览器自动打开网页即可看到效果，因为还未启动后端服务，所以页面显示"正在加载"
+* 重新开启一个命令行窗口
 
+```
+// 进入mock文件夹
+$ cd mock
+// node环境下运行server.js文件
+$ node server.js
+```
+此时刷新网页即可正常显示
 
 

@@ -21,19 +21,15 @@ import CityList from '../../components/CityList'
 class City extends React.Component {
     constructor(props, context) {
         super(props, context);
-        this.shouldComponentUpdate = PureRenderMixin
-            .shouldComponentUpdate
-            .bind(this);
+        this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
         return (
-            <div className=" animated slideInRight">
+            <div>
                 <CommonHeader title="选择城市"/>
                 <CurrentCity cityName={this.props.userinfo.cityName}/>
                 <CityList
-                    changeFn={this
-                    .changeCity
-                    .bind(this)}/> {/*<TodoList />*/}
+                    changeFn={this.changeCity.bind(this)}/> {/*<TodoList />*/}
             </div>
 
         )
@@ -46,10 +42,7 @@ class City extends React.Component {
         // 修改redux
         const userinfo = this.props.userinfo
         userinfo.cityName = newCity
-        this
-            .props
-            .userInfoActions
-            .update(userinfo)
+        this.props.userInfoActions.update(userinfo)
 
         // 修改localstor
         localStore.setItem(CITYNAME, newCity)
