@@ -1,8 +1,10 @@
 
-*此项目基于React、Redux、react-router
-fetch、koa开发的单页应用*
-
 #### 项目总结
+* 此项目基于React、Redux、react-router、fetch、koa、flex、ES6开发的单页应用
+* 项目参考了慕课大众点评项目教程，其中布局部分完全独立完成
+* 通过这个项目，学习到了智能组件、傻瓜组件的区别以及Redux、react-redux的结合使用
+* 也了解到提升React组件性能的一些方法
+* 学习到开发React项目，调试的工具和方法
 
 
 
